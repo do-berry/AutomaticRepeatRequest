@@ -6,7 +6,7 @@ class Model:
     frameSize = [2,10]                                                          # lista MxN: ilosc ramek x ilosc bitow [bez uwzglednienia bitu parzystosci!!!]
     frames = []                                                                 # lista list == lista z ramkami
 
-    def __init__(self):
+    def fillMessage(self):
         for i in range(self.bits):
             self.message.append(random.randint(0,1))                            # uzupelnia message 0 lub 1
 
@@ -43,6 +43,7 @@ class Model:
 
 def test():
     m = Model()
+    m.fillMessage()
     # m.print()
     m.createFrames();
     print("\n")
